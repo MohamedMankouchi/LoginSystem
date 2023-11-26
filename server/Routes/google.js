@@ -1,0 +1,37 @@
+const router = require("express").Router();
+const passport = require("passport");
+
+router.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+router.get("/google/failed", (req, res) => {
+  res.send(401).json({
+    message: "A problem occur while connecting",
+  });
+});
+
+router.get("/google/success", (req, res) => {
+  console.log(req.user);
+  if (req.user) {
+    return res.status(200).json({ user: req.user });
+  } else {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+});
+
+router.get("/logout", (req, res) => {
+  req.logout(() => {
+    res.redirect("http://localhost:5173/");
+  });
+});
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "/google/failed",
+    successRedirect: "http://localhost:5173/profile",
+  })
+);
+
+module.exports = router;

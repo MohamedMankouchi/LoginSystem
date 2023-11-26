@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1c1c1f;
+}
+
+.loginForm,
+.registerForm {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #20202a;
+  box-shadow: #00000059 0 5px 15px;
+  color: white;
+}
+
+.loginForm-form,
+.registerForm-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.loginForm-form input,
+.registerForm input {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background-color: #242429;
+  box-shadow: #00000026 1.95px 1.95px 2.6px;
+  color: white;
+}
+
+.button {
+  margin-top: 25px;
+}
+
+.button button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  color: #9d00ff;
+  background-color: #9d00ff;
+  color: #fff;
+  box-shadow: 2px 5px 50px -1px #9d00ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.method {
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.google,
+.facebook {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  color: gray;
+  border-radius: 10px;
+  gap: 10px;
+  padding-right: 5px;
+  width: calc(35% + 20px);
+  justify-content: center;
+  height: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.socials {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.google img,
+.facebook img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile {
+  background-color: #20202a;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 300px;
+  box-shadow: #00000059 0 5px 15px;
+}
+
+.profilePicture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile span {
+  color: #9d00ff;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 25px;
+  }
+}
