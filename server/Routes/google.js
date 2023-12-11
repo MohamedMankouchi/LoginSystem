@@ -23,14 +23,14 @@ router.get("/google/success", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.logout(() => {
-    res.redirect("http://localhost:5173/");
+    res.redirect("https://loginsystem-r5js.onrender.com/");
   });
 });
 router.get(
   "/google/callback",
   passport.authenticate("google", {
     failureRedirect: "/google/failed",
-    successRedirect: "http://localhost:5173/profile",
+    successRedirect: "https://loginsystem-r5js.onrender.com/profile",
   })
 );
 

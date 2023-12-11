@@ -9,7 +9,9 @@ const cookieParser = require("cookie-parser");
 require("./passport");
 const googleAuth = require("./Routes/google");
 const githubAuth = require("./Routes/github");
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(
+  cors({ credentials: true, origin: "https://loginsystem-r5js.onrender.com/" })
+);
 app.use(cookieParser());
 app.use(
   session({
