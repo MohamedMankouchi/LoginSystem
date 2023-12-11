@@ -3,12 +3,10 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const GithubStrategy = require("passport-github2").Strategy;
 const { users } = require("./users");
 passport.serializeUser((user, done) => {
-  console.log(user);
   done(null, user);
 });
 
 passport.deserializeUser((user, done) => {
-  console.log(user);
   done(null, user);
 });
 
@@ -22,8 +20,6 @@ passport.use(
         "https://loginsystemserver.onrender.com/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      console.log(profile);
-
       done(null, profile);
     }
   )
