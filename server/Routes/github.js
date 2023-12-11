@@ -23,14 +23,14 @@ router.get("/github/success", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.logout(() => {
-    res.redirect("https://loginsystem-r5js.onrender.com/");
+    res.redirect("https://loginsystem-anzg.onrender.com");
   });
 });
 router.get(
   "/github/callback",
   passport.authenticate("github", {
     failureRedirect: "/github/failed",
-    successRedirect: "https://loginsystem-r5js.onrender.com/profile",
+    successRedirect: "https://loginsystem-anzg.onrender.com/profile",
   })
 );
 
