@@ -23,12 +23,12 @@ app.use(
     cookie: {
       maxAge: 24 * 60 * 60 * 100,
       secure: true,
-      sameSite: "strict",
+      httpOnly: true,
     },
   })
 );
-app.use(passport.initialize());
 app.use(passport.session());
+app.use(passport.initialize());
 app.use(express.json());
 
 app.use("/auth", googleAuth);
