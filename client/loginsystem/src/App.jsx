@@ -5,12 +5,12 @@ import { Link, Navigate, useLoaderData } from "react-router-dom";
 function App() {
   const handleGoogleLogin = () => {
     localStorage.setItem("type", "google");
-    window.open("http://localhost:3000/auth/google", "_self");
+    window.open("https://loginsystemserver.onrender.com/auth/google", "_self");
   };
 
   const handleGithubLogin = () => {
     localStorage.setItem("type", "github");
-    window.open("http://localhost:3000/auth/github", "_self");
+    window.open("https://loginsystemserver.onrender.com/auth/github", "_self");
   };
   const user = useLoaderData();
 

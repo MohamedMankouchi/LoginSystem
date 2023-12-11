@@ -7,7 +7,7 @@ export const Profile = () => {
   const type = localStorage.getItem("type");
   const handleLogout = () => {
     localStorage.clear();
-    window.open("http://localhost:3000/auth/logout", "_self");
+    window.open("https://loginsystemserver.onrender.com/auth/logout", "_self");
   };
 
   return (

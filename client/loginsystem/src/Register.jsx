@@ -19,7 +19,7 @@ export const Register = () => {
       return alert("Please fill in the missing fields");
     }
 
-    fetch("http://localhost:3000/register", {
+    fetch("https://loginsystemserver.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
