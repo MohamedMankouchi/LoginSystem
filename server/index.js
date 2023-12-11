@@ -10,7 +10,7 @@ require("./passport");
 const googleAuth = require("./Routes/google");
 const githubAuth = require("./Routes/github");
 app.use(
-  cors({ credentials: true, origin: "https://loginsystem-anzg.onrender.com/" })
+  cors({ credentials: true, origin: "https://loginsystem-anzg.onrender.com" })
 );
 app.use(cookieParser());
 app.use(
