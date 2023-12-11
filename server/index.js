@@ -17,10 +17,12 @@ app.use(
     secret: "mohamed",
     resave: false,
     saveUninitialized: false,
+    proxy: true,
     cookie: {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 100,
-      secure: false,
+      secure: true,
+      sameSite: "strict",
     },
   })
 );
